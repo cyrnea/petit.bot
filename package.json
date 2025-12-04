@@ -1,10 +1,10 @@
 {
-  "name": "telegram-bot",
+  "name": "petitrocks-telegram-bot",
   "version": "1.0.0",
-  "main": "bot.js",
+  "main": "petit.bot.js",
   "type": "module",
   "scripts": {
-    "start": "node bot.js"
+    "start": "node petit.bot.js"
   },
   "dependencies": {
     "node-telegram-bot-api": "^0.61.0",

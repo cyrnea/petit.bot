@@ -1,7 +1,12 @@
-const TelegramBot = require('node-telegram-bot-api');
-const axios = require('axios');
+import TelegramBot from "node-telegram-bot-api";
+import axios from "axios";
 
-const TELEGRAM_TOKEN = 'TON_TELEGRAM_TOKEN_ICI';
+const TELEGRAM_TOKEN = process.env.TELEGRAM_TOKEN;
+
+if (!TELEGRAM_TOKEN) {
+  console.error("❌ TELEGRAM_TOKEN manquant dans les variables Render");
+  process.exit(1);
+}
 
 const bot = new TelegramBot(TELEGRAM_TOKEN, { polling: true });
 
